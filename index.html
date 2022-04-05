@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Flow+Block&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="common-style.css">
     <title>Document</title>
     <style>
 
@@ -58,7 +59,7 @@
         .container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: 300px 200px auto 1fr minmax(500px, auto);
+            grid-template-rows: 300px minmax(200px, auto) auto 1fr minmax(500px, auto);
             grid-gap: 40px;
             margin: 0 auto;
             width: 960px;
@@ -91,6 +92,9 @@
         .item-2 {
             grid-column: 1 / 4;
             grid-row: 2;
+            display: flex;
+            flex-direction: column;
+
         }
 
         .item-3,
@@ -198,20 +202,34 @@
             background-color: var(--color-light-sea);
         }
 
+
+        .item-header-2 {
+            font-size: 20px;
+            line-height: 30px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
     </style>
 </head>
 <body>
     <div class="wrapper">
         <div class="container">
             <div class="item item-1">
-                <p>
+                <div>
                     Header & Logo
-                </p>
+                </div>
             </div>
             <div class="item item-2">
-                <p>
+                <div class="item-header item-header-2">
                     About Us
-                </p>    
+                </div>
+                <div class="menu-list-wrap">
+                    <ul class="menu-list">
+                        <li class="menu-item"><a href="layout-1.html">Сетка 1</a></li>
+                        <li class="menu-item"><a href="layout-2.html">Сетка 2</a></li>
+                    </ul>
+                </div>    
             </div>
             <div class="item item-3">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis repellat nisi aspernatur alias.
